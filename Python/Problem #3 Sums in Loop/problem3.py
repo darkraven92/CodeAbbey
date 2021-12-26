@@ -1,10 +1,11 @@
-def sumloop():
-    a = [634933,705962,973827,706696,616235,29133,35058]
-    b = [31318,403002,944582,723799,154463,332650,107160]
+count = int(input())
+sums = []
 
-    for x in a:
-        for y in b:
-            sum = x + y
-            print(sum)
-            
-sumloop()
+for i in range(count):
+    line = input().split()
+    sum = 0
+    for num in line:
+        sum += int(num)
+    sums.append(str(sum))
+
+print(' '.join(sums))
