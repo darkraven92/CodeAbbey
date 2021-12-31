@@ -1,0 +1,4 @@
+input = input("data:\n")
+
+
+
