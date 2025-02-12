@@ -1,0 +1,21 @@
+>;             Get input value into cell 0.
+
+>+           Initialize cell 1 to 1, which is used for the loop iterator.
+[              Start the main loop: continue as long as cell 1 is less than or equal to cell 0.
+  #            push the current iterator on the stack
+  >+          Initialize cell 2 to 1, cell 2 is now used as our multiplicand.
+  [            Start inner loop: multiply the iterator by itself.
+        <       go back to cell 1.
+        +       Increment counter (at cell 2).
+        >       go to cell 2
+        -       Decrement multiplicand counter (at cell 2).
+  ]             End inner loop
+  <
+  #            push the result on stack,
+  $            get iterator from stack.
+  >           go to next cell.
+  :           print result and add a space.
+  <           go back to cell 1.
+  +          increment iterator by 1
+    <
+]              End outer loop.
